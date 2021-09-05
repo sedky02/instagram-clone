@@ -1,0 +1,28 @@
+*{
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+}
+.App{
+  // &.dark-mode {
+  //   @import "./scss_variables/dark-theme";
+  //   @import "./components/styles/home",
+  //   "./components/styles/login",
+  //   "./components/styles/nav",
+  //   "./components/styles/posts";
+  //   background-color: $l-bg;
+ 
+  // }
+  // &.light-mode{
+  //   @import "./scss_variables/light-theme";
+  //   @import "./components/styles/home",
+  //   "./components/styles/login",
+  //   "./components/styles/nav",
+  //   "./components/styles/posts";
+  //   background-color: $l-bg;
+   
+  // }
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
