@@ -4,7 +4,7 @@ This is a full-stack web application inspired by Instagram. The project is built
 - **Backend**: Express.js and MongoDB
 - **Frontend**: React.js, SCSS, Bootstrap, and Material-UI
 
-> **Note:** This project is still incomplete and was originally created 3 years ago.
+> **Note:** This project is still incomplete and was originally created 3 years ago (2021).
 
 ## Features
 - [x] Seamless user authentication system with secure login functionality.
