@@ -1,0 +1,38 @@
+@import "../../styles/variables" ;
+.nav{
+    width: 100vw;
+        display:flex; 
+        align-items:center; 
+        justify-content:center;
+        height: 60px;
+        background-color: $white;
+        border-bottom: 1px solid rgba($t,0.1);
+        position: fixed;
+        top: 0;
+        .navigation{
+            height: 60px;
+            width: 100%;
+            max-width: 935px;
+            padding: 0 auto;
+                
+            .inner-nav{
+                padding: 0 20px;
+                display:flex; 
+                align-items:center; 
+                justify-content:space-between;
+                height: inherit;
+                width: inherit;
+                .img{
+                    padding-top: 5px;
+                    display: flex;
+                    flex: 0 0 auto;
+                }
+                .search-container{
+                    justify-self: flex-end;
+                }
+                z-index: 12;
+            }
+            
+           
+        }
+}

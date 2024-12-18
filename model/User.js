@@ -4,13 +4,22 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         min: 3,
-        max: 255
+        max: 255,
+        trim:true
+    },
+     username: {
+        type: String,
+        required: true,
+        min: 3,
+        max: 255,
+        trim:true
     },
     email: {
         type: String,
         required: true,
         min: 6,
-        max: 255
+        max: 255,
+        trim:true
     },
     password: {
         type: String,
@@ -20,5 +29,5 @@ const userSchema = new mongoose.Schema({
     }
 }, {timestamps: true} // this is gonna make created - modified at automatically
 )
-
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
+module.exports = User;

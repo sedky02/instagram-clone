@@ -1,8 +1,8 @@
 import axios from "axios";
-import { REGISTER_USER, LOGIN_USER, GET_USER, LOADING_USER } from "./types";
-const url = "http://localhost:5000/api/user/";
+import { REGISTER_USER, LOGIN_USER, GET_USER, LOADING_USER, CLEAR_USER, CLEAR_USER_INFO } from "./types";
+
+const url = "http://localhost:5000/api/users/";
 export const registerUser =  (userData) => dispatch => {
-    dispatch(setLoading())
     axios({
         method: "post",
         url: `${url}register/`,
@@ -29,10 +29,9 @@ export const registerUser =  (userData) => dispatch => {
       })
 };
 export const loginUser =  (user) => dispatch => {
-    dispatch(setLoading())
     axios({
         method: "post",
-        url:`http://localhost:5000/api/user/login/` ,
+        url:`${url}login/` ,
         headers: {
             "Access-Control-Allow-Origin" :  "*",
             'content-type': 'application/json',
@@ -42,24 +41,41 @@ export const loginUser =  (user) => dispatch => {
         },
         data: user
     })
+       
       .then(res => {
           dispatch({
-            type : REGISTER_USER,
+            type : LOGIN_USER,
             payload: res.data
         })
       })
       .catch(err => {
 
          dispatch({
-            type : REGISTER_USER,
+            type : LOGIN_USER,
             payload: err
         })
       })
 };
 
-export const  setLoading = () => {
+
+export const  transferPage= () => {
     return {
-        type: LOADING_USER
+        type: "PAGE_TRANSFER"
+    }
+}
+export const  LogOut= () => {
+    return {
+        type: "LOGOUT"
+    }
+}
+export const  clearInfo= () => {
+    return {
+        type: CLEAR_USER_INFO
+    }
+}
+export const  clearPost= () => {
+    return {
+        type: "CLEAR_STATUS"
     }
 }
 export const darker = ()=>{

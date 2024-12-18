@@ -1,28 +1,28 @@
-*{
-  margin:0; 
-  padding:0; 
-  box-sizing:border-box;
+@import "./styles/variables";
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+html, body{
+    background-color: $bg_white;
 }
 .App{
-  // &.dark-mode {
-  //   @import "./scss_variables/dark-theme";
-  //   @import "./components/styles/home",
-  //   "./components/styles/login",
-  //   "./components/styles/nav",
-  //   "./components/styles/posts";
-  //   background-color: $l-bg;
- 
-  // }
-  // &.light-mode{
-  //   @import "./scss_variables/light-theme";
-  //   @import "./components/styles/home",
-  //   "./components/styles/login",
-  //   "./components/styles/nav",
-  //   "./components/styles/posts";
-  //   background-color: $l-bg;
-   
-  // }
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+    .nav{
+        width: 100vw;
+        display:flex; 
+        align-items:center; 
+        justify-content:center;
+        height: 60px;
+        background-color: $white;
+        border-bottom: 1px solid rgba($t,0.1);
+        position: fixed;
+        top: 0;
+        z-index: 1234;
+    }
+    
+    background-color: $bg_white;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
 }

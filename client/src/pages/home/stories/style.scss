@@ -1,0 +1,71 @@
+@import "../../../styles/variables";
+.Stories{
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 3px ;
+    padding: 0.5rem  0.25rem 0.5rem 0;
+    box-shadow: 0 3px 3px 10px -2px rgba(0,0,0,0.05);
+    height: 118px;
+    overflow-y: hidden;
+    display:flex; 
+    // gap: 1rem;
+    position: relative;
+    
+    .story{
+        height: 80px;
+        top: 2px;
+        width: 80px;
+        margin: 0 0.25rem !important;
+        display:flex; 
+        align-items:center; 
+        flex-direction: column;
+        padding: 5px 0.5rem 0;
+        img, .img   {
+            width: 56px !important;
+            height: 56px !important;
+            border-radius: 50%;
+            
+        }
+        cursor: pointer;
+        p{
+            
+            font-weight: 400;
+            color: $t;
+            font-size: 14px;
+            line-height: 18px;
+            padding-bottom: 4px;
+            margin-bottom: 0;
+            width: inherit;
+            display: flex;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+       
+    }
+    .image-item{
+        width: fit-content;
+        height: fit-content;
+        &:first-child{
+            margin-left: 0.25rem !important;
+        }
+        &:last-child{
+            margin-right: 0.5rem !important;
+        }
+    }
+    .react-multiple-carousel__arrow, .react-multiple-carousel__arrow--right{
+        background-color: rgba($white, 0.9);
+        
+        &::before{
+            color: $t;
+        }
+        &:hover{
+            background-color: rgba($white, 1); 
+        }
+    }
+}

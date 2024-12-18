@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
-import darkReducer from './darker';
+import pageReducer from './pages';
 import userReducer from './users';
+import postReducer from './posts';
 
 const allReducers = combineReducers({
-    darkReducer,
-    userReducer
+    pageReducer,
+    userReducer,
+    postReducer
 })
 export default allReducers;

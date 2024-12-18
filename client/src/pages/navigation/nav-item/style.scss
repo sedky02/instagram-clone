@@ -1,0 +1,22 @@
+@import "../../../styles/variables" ;
+.Items{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    white-space: nowrap;
+    .item{
+        &:not(:first-child){
+            margin-left: 1.25rem;
+        }
+        cursor: pointer;
+        &.item-profile{
+            img{
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+            }
+        }
+    } 
+    
+}
